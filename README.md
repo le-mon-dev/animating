@@ -79,8 +79,6 @@ Roblox Studio와 Moon Animator로 만들고, 완성본은 YouTube 채널 **[Le_�
 | [`awards/`](awards/) | 수상 공지 스크린샷 원본 |
 | [`docs/`](docs/) | GitHub Pages 페이지 (YouTube 임베드 재생) |
 
-원본 렌더 영상(4K, 총 1.5GB)은 용량 때문에 저장소에 넣지 않았습니다.
-
 ## 도구
 
 Roblox Studio · Moon Animator · OBS · 영상 편집
