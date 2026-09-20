@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Le_몬 Animating</title>
+<meta name="description" content="Roblox 캐릭터 애니메이션 작업 모음. YouTube 영상, GIF 미리보기, 수상 기록.">
+<style>
+  :root{--bg:#0f1115;--card:#171a21;--text:#e8eaf0;--muted:#9aa3b2;--accent:#ff4d4d;--line:#262b36}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,"Segoe UI","Apple SD Gothic Neo","Malgun Gothic",sans-serif;line-height:1.5}
+  header{padding:48px 16px 24px;text-align:center;border-bottom:1px solid var(--line)}
+  h1{margin:0 0 8px;font-size:2rem}
+  header p{margin:0;color:var(--muted)}
+  .links a{display:inline-block;margin:12px 6px 0;padding:8px 14px;border-radius:999px;background:var(--card);color:var(--text);text-decoration:none;border:1px solid var(--line)}
+  .links a:hover{border-color:var(--accent)}
+  main{max-width:1100px;margin:0 auto;padding:16px}
+  h2{margin:40px 0 16px;font-size:1.4rem;border-left:4px solid var(--accent);padding-left:10px}
+  .grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fill,minmax(300px,1fr))}
+  .grid.shorts{grid-template-columns:repeat(auto-fill,minmax(220px,1fr))}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+  .video{position:relative;width:100%;aspect-ratio:16/9;background:#000}
+  .shorts .video{aspect-ratio:9/16}
+  .video iframe,.video img{position:absolute;inset:0;width:100%;height:100%;border:0}
+  .video img{object-fit:cover;cursor:pointer}
+  .video .play{position:absolute;inset:0;margin:auto;width:64px;height:64px;border-radius:50%;background:rgba(0,0,0,.6);display:flex;align-items:center;justify-content:center;pointer-events:none}
+  .video .play::after{content:"";border-left:22px solid #fff;border-top:13px solid transparent;border-bottom:13px solid transparent;margin-left:6px}
+  .meta{padding:10px 12px;font-size:.92rem}
+  .meta b{display:block}
+  .meta span{color:var(--muted)}
+  .gifs{display:grid;gap:12px;grid-template-columns:repeat(auto-fill,minmax(180px,1fr))}
+  .gifs figure{margin:0;background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+  .gifs img{width:100%;display:block;background:#000;aspect-ratio:1;object-fit:contain}
+  .gifs figcaption{padding:8px 10px;font-size:.88rem;text-align:center}
+  .award img{width:100%;border-radius:12px;border:1px solid var(--line)}
+  .award p{color:var(--muted)}
+  footer{text-align:center;color:var(--muted);padding:40px 16px;font-size:.85rem}
+</style>
+</head>
+<body>
+<header>
+  <h1>Le_몬 Animating</h1>
+  <p>Roblox 캐릭터 애니메이션 · 이모트 · 배너 영상</p>
+  <div class="links">
+    <a href="https://www.youtube.com/@Le_%EB%AA%AC" target="_blank" rel="noopener">▶ YouTube 채널</a>
+    <a href="https://github.com/le-mon-dev/animating" target="_blank" rel="noopener">GitHub 저장소</a>
+    <a href="https://github.com/le-mon-dev/portfolio" target="_blank" rel="noopener">포트폴리오</a>
+  </div>
+</header>
+<main>
+  <h2>동영상</h2>
+  <div class="grid" id="videos"></div>
+
+  <h2>Shorts</h2>
+  <div class="grid shorts" id="shorts"></div>
+
+  <h2>GIF 미리보기</h2>
+  <div class="gifs" id="gifs"></div>
+
+  <h2>수상</h2>
+  <div class="award">
+    <p>2026.06.16 · Slap Battles 커뮤니티 디스코드 이모트 애니메이션 이벤트 · 15인 수상자 선정 · 상금 R$ 6,000</p>
+    <img src="https://raw.githubusercontent.com/le-mon-dev/animating/main/awards/2026-06-16_slap-battles-animation-event-winner.jpg" alt="수상 공지 스크린샷">
+  </div>
+</main>
+<footer>le-mon-dev · Roblox Studio · Moon Animator</footer>
+<script>
+const videos=[
+  ["gmCvenLdAEU","슬랩배틀에서","2026.07.28","244회"],
+  ["HkzNePOgEMk","MM2 animation test","2026.06.01","68회"],
+  ["cLXQJ-NY4b0","게임을 20배속하면 생기는 일;;","2026.01.23","241회"]
+];
+const shorts=[
+  ["6TAYoXQUdKs","슬랩배틀 배너 만들기 3","2026.09.15","1,130회"],
+  ["r92dal72zoQ","사고방식을 바꾸세요!","2026.09.15","1,178회"],
+  ["7Gm6Wvb9FEE","슬랩배틀 이모트 만들기 4일차","2026.09.14","877회"],
+  ["n4eLuvo_QXU","슬랩배틀 유튜버들 배너 만들기 2","2026.09.13","1,186회"],
+  ["11KOV_i6zNw","슬랩배틀 유튜버들 배너 만들기","2026.09.10","1,265회"],
+  ["ROUAOw43Jng","슬랩배틀 이모트 만들기 3일차","2026.09.02","1,120회"],
+  ["-DMWxU66qrc","이모트 만들기 2일차(리메이크)","2026.09.02","372회"],
+  ["htE-ycI-8BI","이모트 만들기 2일차 (바르질 24/7)","2026.09.01","929회"],
+  ["-bfln9UEhes","슬랩배틀 이모트 만들기 1일차","2026.08.19","1,289회"],
+  ["Dka7Bf6bjSM","로블록스 MM2 콤보","2026.06.01","248회"],
+  ["NLMgaPYcPUE","게임을 20배속하면 생기는 일...","2026.01.26","1,492회"],
+  ["kbVXqm6ZoxM","고수들 특 :","2025.12.19","1,923회"]
+];
+const gifs=[["brazil-247","브라질 24/7"],["sloya","슬로야"],["emote-day1","이모트 1일차"],["emote-day4","이모트 4일차"],["emote-mania","이모트 마니아"],["loopin","Loopin'"],["nulled","NULLED"],["slaps","SLAPS"],["prince","Prince"],["banner-1","배너 1"],["0828","0828"],["sviv","스비브"]];
+
+function card([id,title,date,views]){
+  const el=document.createElement('div');el.className='card';
+  el.innerHTML=`<div class="video"><img src="https://img.youtube.com/vi/${id}/hqdefault.jpg" alt="${title}" loading="lazy"><div class="play"></div></div>
+  <div class="meta"><b>${title}</b><span>${date} · 조회수 ${views}</span></div>`;
+  el.querySelector('.video').addEventListener('click',e=>{
+    const v=e.currentTarget;
+    v.innerHTML=`<iframe src="https://www.youtube-nocookie.com/embed/${id}?autoplay=1&rel=0" title="${title}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`;
+  },{once:true});
+  return el;
+}
+videos.forEach(v=>document.getElementById('videos').appendChild(card(v)));
+shorts.forEach(v=>document.getElementById('shorts').appendChild(card(v)));
+gifs.forEach(([f,t])=>{const fig=document.createElement('figure');fig.innerHTML=`<img src="https://raw.githubusercontent.com/le-mon-dev/animating/main/previews/gifs/${f}.gif" alt="${t}" loading="lazy"><figcaption>${t}</figcaption>`;document.getElementById('gifs').appendChild(fig);});
+</script>
+</body>
+</html>
