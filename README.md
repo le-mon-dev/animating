@@ -73,7 +73,7 @@ Roblox Studio와 Moon Animator로 만들고, 완성본은 YouTube 채널 **[Le_�
 |---|---|
 | [`roblox/animations/`](roblox/animations/) | 애니메이션 리그 파일 (`two_time.rbxm`, `Penguin.rbxm`) |
 | [`roblox/rigs-and-models/`](roblox/rigs-and-models/) | 작업에 쓴 리그·소품·파티클 (`WardenRig`, `DeluxeRevolver`, `Moss`, `ParticlePacks`) |
-| [`roblox/places/`](roblox/places/) | 촬영용 맵 (`sad.rbxl`, `ChooseYourPower_OldMap.rbxl`, `Forsaken.rbxl`) |
+| [`roblox/places/`](roblox/places/) | 촬영용 맵 (`sad.rbxl`, `ChooseYourPower_OldMap.rbxl`, `Forsaken.rbxl`, `enemies.rbxl`) |
 | [`previews/gifs/`](previews/gifs/) | 대표 영상 GIF 미리보기 (6초, 360px) |
 | [`previews/stills/`](previews/stills/) | 로컬 렌더 영상 48개의 정지 캡처 |
 | [`awards/`](awards/) | 수상 공지 스크린샷 원본 |
